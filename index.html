@@ -26,13 +26,6 @@
       margin: 0 auto;
       padding: 0 32px;
     }
-    .glass {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 28px;
-    }
     .gradient-text {
       background: linear-gradient(135deg, #007BFF, #00D4FF);
       -webkit-background-clip: text;
@@ -589,7 +582,7 @@
           <div class="case-card"><span class="badge">HEALTHCARE</span><h4>MediConnect</h4><p>Secure patient portal with pre‑authorization and scheduling.</p><p style="color: #00D4FF; font-weight: 600; margin-top: 12px;">60% faster intake</p><p style="color: #B0B0B0; font-size: 0.9rem;">Next.js • Azure • FHIR</p></div>
         </div>
         <div style="margin-top: 40px; background: rgba(255,255,255,0.02); border-radius: 24px; padding: 24px; border: 1px solid rgba(255,255,255,0.04);">
-          <p style="color: #B0B0B0;"><i class="fab fa-github" style="color: #00D4FF;"></i> Explore more on our GitHub: <span style="color: #FFF;">github.com/kabelo-dev</span></p>
+          <p style="color: #B0B0B0;"><i class="fab fa-github" style="color: #00D4FF;"></i> Explore more on our GitHub: <span style="color: #FFF;">github.com/bida24-072</span></p>
         </div>
       </section>
     </div>
@@ -620,7 +613,7 @@
             <div class="founder-card">
               <h3>Founder: Kabelo N.</h3>
               <p style="color: #B0B0B0;">Technical lead & architect. Full‑stack developer with deep experience in web, mobile and AI integrations.</p>
-              <p style="color: #00D4FF; font-weight: 500; margin-top: 8px;"><i class="fab fa-github"></i> github.com/kabelo-dev</p>
+              <p style="color: #00D4FF; font-weight: 500; margin-top: 8px;"><i class="fab fa-github"></i> github.com/bida24-072</p>
             </div>
           </div>
         </div>
@@ -674,8 +667,8 @@
   <div id="page-contact" class="page-content hidden-page">
     <div class="container">
       <div class="page-hero">
-        <h1>Let’s move forward. Together.</h1>
-        <p>Book a call or send us a message — we’ll respond within 24 hours.</p>
+        <h1>Let's move forward. Together.</h1>
+        <p>Book a call or send us a message — we'll respond within 24 hours.</p>
       </div>
       <section style="border-bottom: none;">
         <div class="contact-grid">
@@ -722,23 +715,18 @@
 
   <script>
     function showPage(pageId) {
-      // hide all pages
       document.querySelectorAll('.page-content').forEach(el => {
         el.classList.add('hidden-page');
       });
-      // show target
       const target = document.getElementById('page-' + pageId);
       if (target) {
         target.classList.remove('hidden-page');
       }
-      // scroll to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      // update URL hash
       history.pushState(null, '', '#' + pageId);
       return false;
     }
 
-    // on load: check hash
     window.addEventListener('load', function() {
       const hash = window.location.hash.replace('#', '');
       if (hash && document.getElementById('page-' + hash)) {
@@ -748,7 +736,6 @@
       }
     });
 
-    // handle back/forward
     window.addEventListener('hashchange', function() {
       const hash = window.location.hash.replace('#', '');
       if (hash && document.getElementById('page-' + hash)) {
